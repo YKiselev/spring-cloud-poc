@@ -1,0 +1,8 @@
+
+# this config should be shared across all the applications
+
+external:
+  jdbc:
+    url: jdbc:oracle:thin:@dev-db.com:3322:qwerty
+    user: dev_user
+    password: '111'

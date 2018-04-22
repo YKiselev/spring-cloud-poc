@@ -1,10 +1,16 @@
 server:
-  port: 8888
+  port: 8443
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: 123456
+    keyStoreType: PKCS12
+    keyAlias: tomcat
+
 spring:
-  #profiles:
-  #  active: dev
   cloud:
     config:
+      username: user
+      password: '{cipher}AQAIwQ7vq3bfAG95mv+U45klkYXPVhOjiAeUELcMV584vIXm5P6e1JWanr3TWyb1r/iHG6wguajSur7n1W7aRkzeRvtn0GeFWt23gZI1qbg1DDH31WkhHFmw2Bk/eqobKKNg/ggZHLH9F/jYrNiRudF5l6Z66fSWaj+Ny9nf0zP8PFwkUasYlMiiTShgvvW5VaMn3q7BaFopMAls0Uti9LHiR23LzazJke7xyn5Ugp/WPtcSyv7YnbdWRs/5MKSYUSWKasech8UTZapfay8vzfb7VULAWZPTAZCgZu1RgDnuWblcRvOoL+buzIJDVwUGzXjhluiGJM36zO0zi6+7VLJsT1bVMx80Lchc+SkKkt397pRh5PLsyzcqzjNnbiCuNMI='
       server:
         git:
           uri: https://github.com/YKiselev/spring-cloud-poc.git
@@ -15,8 +21,6 @@ spring:
         #native:
         #  searchLocations: classpath:/configs/{profile}
 security:
+  require-ssl: true
   user:
     password: '{cipher}AQAIwQ7vq3bfAG95mv+U45klkYXPVhOjiAeUELcMV584vIXm5P6e1JWanr3TWyb1r/iHG6wguajSur7n1W7aRkzeRvtn0GeFWt23gZI1qbg1DDH31WkhHFmw2Bk/eqobKKNg/ggZHLH9F/jYrNiRudF5l6Z66fSWaj+Ny9nf0zP8PFwkUasYlMiiTShgvvW5VaMn3q7BaFopMAls0Uti9LHiR23LzazJke7xyn5Ugp/WPtcSyv7YnbdWRs/5MKSYUSWKasech8UTZapfay8vzfb7VULAWZPTAZCgZu1RgDnuWblcRvOoL+buzIJDVwUGzXjhluiGJM36zO0zi6+7VLJsT1bVMx80Lchc+SkKkt397pRh5PLsyzcqzjNnbiCuNMI='
-management:
-  security:
-    enabled: true

@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>config-server</artifactId>
+    <artifactId>hello</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
 
         <dependency>
@@ -43,7 +43,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.github.ykiselev.ConfigServiceApp</mainClass>
+                    <mainClass>com.github.ykiselev.HelloApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>

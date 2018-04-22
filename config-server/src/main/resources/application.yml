@@ -3,8 +3,6 @@ server:
 spring:
   profiles:
     active: native, dev
-#  config:
-#    name: foo
   cloud:
     config:
       server:
@@ -12,4 +10,4 @@ spring:
           searchLocations: classpath:/configs/{profile}
 management:
   security:
-    enabled: false
+    enabled: true

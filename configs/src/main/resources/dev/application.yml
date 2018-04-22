@@ -1,0 +1,8 @@
+
+# this config should be shared across all the applications
+
+external:
+  jdbc:
+    url: jdbc:oracle:thin:@app-database.com:2222:xyz
+    user: dbuser
+    password: {cipher}AQBC6JokjBgB2T0Y5u88f3s/0uGHjcKrb4HnRKRjOXwuxi7bBmHaJWjIWxHrnFU6kuaTQdHtlnbVgTSXHwjmAlI8A9V8h4XvD864u2OszWnMbhvH1fSg6BNTr+1/CClFD+Opl5BO+qIDHPIFuzUpY7l+h04I79IkE9ab6op49g7jSU3rApFMv6Z4fsVapAqxKlXLdoAHNCnRuPNuDQaJ5kZaPeSIKA4eImbxCT8eAXPfGFXMgK0IeDTrF4QIO4yxOTz5f3zwKlN91QYJesivCnkU4Nqs74qA1yHIxx6ESRO5QH+FGuhQopgFS9jNdgMZfJiCKc0J6ep7uveXhSaj4sh2l7hpSZDB0GVk8CfIZnS9lN0DrsJlbt/z7cnVSMgJRyg=

@@ -1,0 +1,8 @@
+
+# this config should be shared across all the applications
+
+external:
+  jdbc:
+    url: jdbc:oracle:thin:@app-database.com:2222:xyz
+    user: vasiliy.pupkin
+    password: 'nothingtohide'

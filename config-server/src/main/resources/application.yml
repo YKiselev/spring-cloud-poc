@@ -1,13 +1,19 @@
 server:
   port: 8888
 spring:
-  profiles:
-    active: native, dev
+  #profiles:
+  #  active: dev
   cloud:
     config:
       server:
-        native:
-          searchLocations: classpath:/configs/{profile}
+        git:
+          uri: https://github.com/YKiselev/spring-cloud-poc.git
+          searchPaths: configs/src/main/resources/{profile}
+          cloneOnStart: true
+          force-pull: true
+          deleteUntrackedBranches: true
+        #native:
+        #  searchLocations: classpath:/configs/{profile}
 management:
   security:
     enabled: true
